@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <title>Palindrome Birthday</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="heading">Palindrome Birthday 🤔</h1>
+      <p>
+        Enter your birthdate, we'll let you know whether your birthday is
+        palindrome or not. If not, we'll let you know the nearest palindrome
+        date.
+        <span>Don't worry we don't store your data.</span>
+      </p>
+      <div class="alert"></div>
+    </header>
+
+    <form name="form">
+      <div class="date-input">
+        <label for="date-input">birthdate:</label>
+        <input type="date" name="date-input" id="date-input" />
+      </div>
+      <div class="btn-container">
+        <button class="btn" data-btn="check">Check</button>
+        <button class="btn" data-btn="clear">Clear</button>
+      </div>
+
+      <div class="output-section"></div>
+    </form>
+
+    <!-- footer -->
+    <footer class="footer">
+      <h2>social links</h2>
+      <ul class="footer-links">
+        <li>
+          <a href="https://github.com/swastikpatro" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/Swastik2001" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/swastik-patro-2a54bb19b/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://swastik-patro-portfolio.netlify.app/" target="_blank"
+            ><i class="fa-solid fa-laptop-file"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <!-- end of footer -->
+  </body>
+</html>
