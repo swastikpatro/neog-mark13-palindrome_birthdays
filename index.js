@@ -3,21 +3,6 @@
 const birthInput = document.querySelector('#date-input');
 const btnContainer = document.querySelector('.btn-container');
 const output = document.querySelector('.output-section');
-const alertText = document.querySelector('.alert');
-
-function alertMsg(type, msg, ms) {
-  const tID = setInterval(() => {
-    alertText.innerText = msg;
-    alertText.classList.add(`alert-${type}`);
-    alertText.classList.add('show-alert');
-  }, 0);
-
-  setTimeout(() => {
-    clearInterval(tID);
-    alertText.classList.remove(`alert-${type}`);
-    alertText.classList.remove('show-alert');
-  }, ms);
-}
 
 function lessThan10(thingToCheck) {
   return thingToCheck < 10 ? '0' + thingToCheck : `${thingToCheck}`;
@@ -102,6 +87,11 @@ function displayOutput(
       </span>`
   }
     `;
+}
+
+function displayErrorMsg(text) {
+  output.innerHTML = `<span style="color:red">
+  ${text}</span>`;
 }
 
 function getPreviousPalindrome(
@@ -196,12 +186,11 @@ function handleContainerClick(e) {
   if (btnClicked === 'clear') {
     birthInput.value = '';
     output.innerText = '';
-    alertMsg('success', 'Cleared', 1000);
     return;
   }
 
   if (!birthInput.value) {
-    alertMsg('danger', 'Please enter your birthdate 🙏', 1000);
+    displayErrorMsg('Please enter your birthdate 🙏');
     return;
   }
 
@@ -221,12 +210,10 @@ function handleContainerClick(e) {
     // displayOutput(nextPalindromeDate);
     nearestPalindrome(dateObj, birthDate);
   }
-
-  alertMsg('success', 'Done ✅', 1000);
 }
 
 btnContainer.addEventListener('click', handleContainerClick);
 
-document.querySelector('input').addEventListener('click', () => {
+birthInput.addEventListener('click', () => {
   output.innerText = '';
 });
