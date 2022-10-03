@@ -19,3 +19,7 @@ App which checks whether your birthday is a palindrome birthday or not.
 1. Clicking on 'Clear' button, clears (empties) both the input and output.
 1. Error msg to user if:
    - Clicking on 'Check' button without birthdate input.
+
+## Snapshot of the app
+
+![Palindrome Birthday](palindrome-birthday-snap.JPG)
