@@ -132,7 +132,8 @@ function getNextPalindrome(
 
     if (nextNewDateIsPalindromeArr.length) {
       const nextDiffBetnTwo =
-        (newDate.getTime() - presentDate.getTime()) / (1000 * 60 * 60 * 24);
+        1 + (newDate.getTime() - presentDate.getTime()) / (1000 * 60 * 60 * 24);
+      console.log(nextDiffBetnTwo);
       return [
         'next',
         presentDate,
